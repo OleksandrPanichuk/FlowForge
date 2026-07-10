@@ -48,8 +48,8 @@ Without global `turbo`, use your package manager:
 ```sh
 cd my-turborepo
 npx turbo build
-bun dlx turbo build
-bun exec turbo build
+npm dlx turbo build
+npm exec turbo build
 ```
 
 You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
@@ -64,8 +64,8 @@ Without global `turbo`:
 
 ```sh
 npx turbo build --filter=docs
-bun exec turbo build --filter=docs
-bun exec turbo build --filter=docs
+npm exec turbo build --filter=docs
+npm exec turbo build --filter=docs
 ```
 
 ### Develop
@@ -84,8 +84,8 @@ Without global `turbo`, use your package manager:
 ```sh
 cd my-turborepo
 npx turbo dev
-bun exec turbo dev
-bun exec turbo dev
+npm exec turbo dev
+npm exec turbo dev
 ```
 
 You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
@@ -100,8 +100,8 @@ Without global `turbo`:
 
 ```sh
 npx turbo dev --filter=web
-bun exec turbo dev --filter=web
-bun exec turbo dev --filter=web
+npm exec turbo dev --filter=web
+npm exec turbo dev --filter=web
 ```
 
 ### Remote Caching
@@ -125,8 +125,8 @@ Without global `turbo`, use your package manager:
 ```sh
 cd my-turborepo
 npx turbo login
-bun exec turbo login
-bun exec turbo login
+npm exec turbo login
+npm exec turbo login
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -143,8 +143,8 @@ Without global `turbo`:
 
 ```sh
 npx turbo link
-bun exec turbo link
-bun exec turbo link
+npm exec turbo link
+npm exec turbo link
 ```
 
 ## Useful Links
