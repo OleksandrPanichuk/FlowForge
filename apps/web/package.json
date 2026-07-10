@@ -12,7 +12,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "eslint",
-    "format": "prettier --write . && eslint --fix",
+    "format": "eslint --fix",
     "check": "prettier --check .",
     "start": "node --import ./.output/server/instrument.server.mjs .output/server/index.mjs"
   },
