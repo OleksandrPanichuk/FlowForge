@@ -1,0 +1,40 @@
+{
+  "name": "@repo/logger",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "format": "eslint . --fix"
+  },
+  "prettier": "@repo/prettier-config",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.1085.0",
+    "@repo/primitives": "*",
+    "winston": "^3.19.0",
+    "winston-transport": "^4.9.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/prettier-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.39.1",
+    "typescript": "5.9.2"
+  }
+}

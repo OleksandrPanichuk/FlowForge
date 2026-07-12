@@ -16,8 +16,10 @@
     "eslint",
     "sentry",
     "compiler",
-    "form",
+    "db",
+    "table",
+    "tanstack-query",
     "t3env",
-    "tanstack-query"
+    "form"
   ]
 }
