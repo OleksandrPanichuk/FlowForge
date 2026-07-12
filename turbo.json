@@ -1,7 +1,18 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
-  "globalEnv": ["PORT", "VITE_SENTRY_DSN"],
+  "globalEnv": [
+    "AWS_REGION",
+    "CLOUDWATCH_ENABLED",
+    "CLOUDWATCH_LOG_GROUP",
+    "CLOUDWATCH_LOG_LEVEL",
+    "CLOUDWATCH_LOG_STREAM",
+    "LOG_LEVEL",
+    "NODE_ENV",
+    "PORT",
+    "SERVICE_NAME",
+    "VITE_SENTRY_DSN"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
