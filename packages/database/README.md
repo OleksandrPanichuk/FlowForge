@@ -58,3 +58,7 @@ npm run db:generate -w @repo/database
 npm run db:migrate -w @repo/database
 npm run db:studio -w @repo/database
 ```
+
+Migrations are forward-only. If a deployed migration needs to be reverted,
+create a new migration that reverses its changes instead of modifying migration
+files that may already have been applied.
