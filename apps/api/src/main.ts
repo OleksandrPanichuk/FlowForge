@@ -1,8 +1,18 @@
+import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import {
+  NestLoggerService,
+  requestLogContextMiddleware,
+} from './infrastructure/logger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  const logger = new NestLoggerService();
+  const app = await NestFactory.create(AppModule, {
+    logger,
+  });
+  app.use(requestLogContextMiddleware);
+
+  await app.listen(process.env.PORT ?? 8000);
 }
 void bootstrap();

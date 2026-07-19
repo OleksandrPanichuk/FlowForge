@@ -1,41 +1,45 @@
 {
+  "format_on_save": "on",
+  "formatter": [{ "code_action": "source.fixAll.eslint" }, "prettier"],
   "lsp": {
     "eslint": {
       "settings": {
-        "workingDirectory": {
-          "mode": "auto"
-        }
+        "workingDirectories": [{ "mode": "auto" }]
       }
     }
   },
   "languages": {
     "JavaScript": {
       "format_on_save": "on",
-      "formatter": [],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }, "prettier"]
     },
     "JSX": {
       "format_on_save": "on",
-      "formatter": [],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }, "prettier"]
     },
     "TypeScript": {
       "format_on_save": "on",
-      "formatter": [],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }, "prettier"]
     },
     "TSX": {
       "format_on_save": "on",
-      "formatter": [],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      "formatter": [{ "code_action": "source.fixAll.eslint" }, "prettier"]
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": "prettier"
+    },
+    "JSONC": {
+      "format_on_save": "on",
+      "formatter": "prettier"
+    },
+    "CSS": {
+      "format_on_save": "on",
+      "formatter": "prettier"
+    },
+    "Markdown": {
+      "format_on_save": "on",
+      "formatter": "prettier"
     }
   }
 }

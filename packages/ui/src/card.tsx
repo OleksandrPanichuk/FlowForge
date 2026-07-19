@@ -11,10 +11,17 @@ export function Card({
   children: ReactNode;
   href: string;
 }): JSX.Element {
+  const trackingParams = [
+    "utm_source=create-turbo",
+    "utm_medium=basic",
+    "utm_campaign=create-turbo",
+  ].join("&");
+  const trackingHref = `${href}?${trackingParams}"`;
+
   return (
     <a
       className={className}
-      href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
+      href={trackingHref}
       rel="noopener noreferrer"
       target="_blank"
     >
