@@ -4,6 +4,7 @@
   "globalEnv": [
     "AWS_REGION",
     "AWS_PROFILE",
+    "DATABASE_URL",
     "CLOUDWATCH_ENABLED",
     "CLOUDWATCH_LOG_GROUP",
     "CLOUDWATCH_LOG_LEVEL",
