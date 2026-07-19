@@ -1,0 +1,28 @@
+name: PR title
+
+on:
+  pull_request_target:
+    types: [opened, edited, reopened]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  validate:
+    name: Validate title format
+    runs-on: ubuntu-latest
+    env:
+      PR_TITLE: ${{ github.event.pull_request.title }}
+      TITLE_PATTERN: '^\[[A-Za-z][A-Za-z0-9]*( \| [A-Za-z][A-Za-z0-9]*)?\]: [a-z].*[^[:space:].]$'
+    steps:
+      - name: Check title
+        shell: bash
+        run: |
+          if [[ "$PR_TITLE" =~ $TITLE_PATTERN ]]; then
+            exit 0
+          fi
+
+          echo "Invalid pull request title: $PR_TITLE"
+          echo "Use [Scope]: message or [Scope | Subscope]: message."
+          echo "Start the message with a lowercase letter and do not end it with a period."
+          exit 1
